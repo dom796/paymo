@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/paymo/static/css/main.a22efca0.css",
+    "main.js": "/paymo/static/js/main.01c78db1.js",
+    "static/js/453.a94b963c.chunk.js": "/paymo/static/js/453.a94b963c.chunk.js",
+    "index.html": "/paymo/index.html",
+    "main.a22efca0.css.map": "/paymo/static/css/main.a22efca0.css.map",
+    "main.01c78db1.js.map": "/paymo/static/js/main.01c78db1.js.map",
+    "453.a94b963c.chunk.js.map": "/paymo/static/js/453.a94b963c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a22efca0.css",
+    "static/js/main.01c78db1.js"
+  ]
+}
