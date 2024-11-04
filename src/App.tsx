@@ -1,23 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Button from "./shared/ui/Button/Button";
+import PaymentModal from "./components/PaymentModal/PaymentModal";
+import {Route, Routes} from 'react-router-dom';
+import PaymentResult from "./components/PaymentResult/PaymentResult";
 
 function App() {
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const openModal = () => setModalOpen(true);
+    const closeModal = () => setModalOpen(false);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Button
+            text="Open modal"
+            onClick={openModal}
+            className="custom-button"
+        />
+          <PaymentModal
+              isOpen={isModalOpen}
+              onClose={closeModal}
+              initiator="Иван.К"
+              collectionName="Экскурсия"
+          />
+          <Routes>
+              <Route path="/payment-result" element={<PaymentResult />} />
+          </Routes>
       </header>
     </div>
   );

@@ -1,0 +1,80 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    height: 744px;
+    border-radius: 24px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.header {
+    font-family: 'VTB Group UI', sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.submitButton {
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+    background-color: #21a1f1;
+}
+
+.closeButton {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.cvv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer{
+    width: 536px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+}
