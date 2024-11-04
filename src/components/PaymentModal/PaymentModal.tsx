@@ -115,7 +115,17 @@ const PaymentModal= ({ isOpen, onClose, initiator, collectionName }: PaymentModa
                         control={control}
                         error={errors.name?.message}
                         width="536px"
-                        rules={{ required: 'Ведите имя' }}
+                        rules={{
+                            required: 'Введите имя',
+                            maxLength: {
+                                value: 50,
+                                message: 'Имя не должно превышать 50 символов'
+                            },
+                            pattern: {
+                                value: /^[A-Za-zА-Яа-яЁё\s]+$/,
+                                message: 'Имя должно содержать только буквы'
+                            }
+                        }}
                     />
                     <InputWithLabel
                         name="message"
@@ -124,6 +134,16 @@ const PaymentModal= ({ isOpen, onClose, initiator, collectionName }: PaymentModa
                         error={errors.message?.message}
                         placeholder={collectionName}
                         width="536px"
+                        rules={{
+                            maxLength: {
+                                value: 50,
+                                message: 'Сообщение не должно превышать 50 символов'
+                            },
+                            pattern: {
+                                value: /^[A-Za-zА-Яа-яЁё\s]+$/,
+                                message: 'Сообщение должно содержать только буквы'
+                            }
+                        }}
                     />
                     <div className={styles.footer}>
                         <Button
